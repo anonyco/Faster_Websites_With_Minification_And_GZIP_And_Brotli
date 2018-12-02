@@ -1,0 +1,13 @@
+#sticktop, #stickbottom {
+	position: -webkit-sticky;
+	position: sticky;
+}
+#sticktop {
+	top: 0px;
+}
+#stickbottom {
+	bottom: 0px;
+}
+#lowmargin {
+	height: 1em;
+}
