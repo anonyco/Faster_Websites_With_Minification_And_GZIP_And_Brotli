@@ -1,6 +1,6 @@
 # Faster_Websites_With_Minification_And_GZIP_And_Brotli
 
-1.       Before minifying, please manage your files as follows:  (you may already know these things, but just in case you have not done this recently):
+1.       Before minifying, please manage your files as follows:
 
 a.       Please make sure that you have created a clone of the files that exist on the server on your own machine (this clone will cause them all to be placed in the same directory in case they are not presently).
 
