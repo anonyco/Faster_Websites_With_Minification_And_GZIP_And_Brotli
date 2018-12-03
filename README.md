@@ -20,9 +20,7 @@ c.       Minify the CSS. Also note that XHTML CSS is the exact same as HTML CSS,
 
 a.       The following steps must be performed exactly as described, or they will not work. They must be performed on your PC, not on the server, or they will not work. More specifically, these steps must be performed on a Windows PC because the following steps will not work on any other operating system.
 
-b.       Download the robo_gzip folder.
-
-c.       If the version you received is zipped, then unzip it.
+b.       Download this entire repository. You will find the robo_gzip folder inside the production_release folder.
 
 d.       After unzipping, make sure there are no duplicate nested folders: there should not be a "robo_gzip" folder inside the "robo_gzip" folder. If there is a "robo_gzip" folder inside the "robo_gzip" folder, then go into the "robo_gzip" folder inside the "robo_gzip" folder, cut all the files from there, then maneuver to the outer "robo_gzip" folder and paste all the files here then delete the "robo_gzip" folder inside the "robo_gzip" folder that you are currently in.
 
