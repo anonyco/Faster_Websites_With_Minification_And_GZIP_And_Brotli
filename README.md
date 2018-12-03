@@ -58,6 +58,14 @@ b.       To upload these changes to the live site:
 
                              vii.      There is no need to delete the compressed flies because robo_gzip will overwrite the compressed files when the minified files have changed. robo_gzip will only compress the files that you have changed.
 
+# Results
+
+### Before: https://anonyco.github.io/Faster_Websites_With_Minification_And_GZIP_And_Brotli/source_code/
+
+### After: https://anonyco.github.io/Faster_Websites_With_Minification_And_GZIP_And_Brotli/production_release/
+
+
+
  
 
 
