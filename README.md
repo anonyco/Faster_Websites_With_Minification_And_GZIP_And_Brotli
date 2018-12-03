@@ -46,8 +46,6 @@ a.       As you are editing the source files (in the future) you may view the we
 
 b.       To upload these changes to the live site:
 
-                                 i.      First, send me the new updated Source files
-
                                ii.      Then, find the files that you have changed since the last live site update:
 
                               iii.      then overwrite the "release files" with the updated source files;
