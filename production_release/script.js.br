@@ -1,0 +1,1 @@
+‹s€delete eval;delete Proxy;(function(b,a){"use strict";b.getElementById("change_color").addEventListener("click",function(){b.body.style.backgroundColor="rgb("+256*a()+","+256*a()+","+256*a()+")"},{passive:1})})(document,Math.random);
