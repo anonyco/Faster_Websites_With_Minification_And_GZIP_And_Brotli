@@ -10,7 +10,7 @@ c.       Next, Create a copy of the new source files and label this copy "Releas
 
 2.       Minify the "Release files"
 
-a.       Minify the images ( I know that you are planning to do this)
+a.       Minify the images via https://www.compressor.io
 
 b.       Minify the xhtml files. Since pretty much all HTML minifiers will break the file, download notepad++ and open up the file in notepad++. Then open up the search/replace box and set it for regular expressions. Now, replace "\s+(?=<|\s)" with "" (both without the quotes). The file size will reduce by 20% using this method. Make sure you do not compress the original file. You may have to go back and change the file. Instead, have a separate dev site which contains the source files. Then, when uploading the dev site to the live site, transfer over all the files, minify the files, and upload the minified files to the live site.
 
