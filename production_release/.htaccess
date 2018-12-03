@@ -1,0 +1,39 @@
+RewriteEngine on
+Options +Indexes
+DirectoryIndex index.xhtml index.shtml index.xml index.php
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}?%{QUERY_STRING} [R=302,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) /?%{REQUEST_URI} [R=302,L]
+Header unset Keep-Alive
+Header unset x-powered-by
+Header unset server
+Header unset vary
+Header unset connection
+FileETag None
+RewriteRule . - [E=no-gzip:1]
+<IfModule mod_headers.c>
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteRule ^(.*\.(?:css|js|json|html|xml))$ $1\.gz [QSA]
+
+RewriteCond %{HTTP:Accept-encoding} br
+RewriteCond %{HTTP:Accept-encoding} !gzip
+RewriteCond %{REQUEST_FILENAME}\.br -s
+RewriteRule ^(.*\.(?:css|js|json|html|xml))$ $1\.br [QSA]
+
+RewriteRule \.css\.[gb][zr]$ - [T=text/css,E=no-gzip:1]
+RewriteRule \.js\.[gb][zr]$ - [T=application/javascript,E=no-gzip:1]
+RewriteRule \.(?:json)\.[gb][zr]$ - [T=application/json,E=no-gzip:1]
+RewriteRule \.(?:html|xml)\.[gb][zr]$ - [T=application/xml,E=no-gzip:1]
+
+<FilesMatch "(?:css|js|json|html|xml)\.gz$">
+Header set Content-Encoding gzip
+Header append Vary Accept-Encoding
+</FilesMatch>
+<FilesMatch "(?:css|js|json|html|xml)\.br$">
+Header set Content-Encoding br
+Header append Vary Accept-Encoding
+</FilesMatch>
+</IfModule>
